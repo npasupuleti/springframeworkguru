@@ -21,10 +21,10 @@ public class TaskApplication {
     CommandLineRunner runner(TaskService taskService) {
         return args -> {
 
-            taskService.save(new Task(id:1L, name:"create SpringBootApplication", LocalDate.now(), completed:true));
-            taskService.save(new Task(id:4L, name:"create SpringBootApplication", LocalDate.now(), completed:true));
-            taskService.save(new Task(id:2L, name:"create SpringBootPackages", LocalDate.now().plus(1, ChronoUnit.DAYS), completed:false));
-            taskService.save(new Task(id:3L, name:"create SpringBootStructure", LocalDate.now(), completed:true));
+            taskService.save(new Task(1L, "create SpringBootApplication", LocalDate.now(), true));
+            taskService.save(new Task(4L, "create SpringBootApplication", LocalDate.now(), true));
+            taskService.save(new Task(2L, "create SpringBootPackages", LocalDate.now().plus(1, ChronoUnit.DAYS), false));
+            taskService.save(new Task(3L, "create SpringBootStructure", LocalDate.now(), true));
 
 
         };
